@@ -1246,3 +1246,34 @@ fieldset[disabled] .dummy-btn-link:focus {
 .minicolors-theme-bootstrap.minicolors-position-right .minicolors-swatch {
     margin-top: 3px;
 }
+
+.buttons-bar{
+  font-family: 'Lato', sans-serif;
+    border-color: transparent;
+    min-height: 70px;
+    height: 70px !important;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    top: 0px;
+    border-top-width: 1px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    background: #1E88E5;
+    border-radius: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    display: block;
+}
+.dummy-editor .edit-area{
+  margin-top:50px;
+  margin-bottom:70px;
+}
+.buttons-bar .dummy-element:hover {
+    background-color: #1976D2 !important;
+}
+.buttons-bar * {
+  color:white;
+}

@@ -39,15 +39,31 @@
 
 	<dummy-editor ng-model="demoModel" custom-css="demoCss"></dummy-editor>
 
+<nav class="buttons-bar">
+	<div class="container">
+		<ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a ng-click="generate()" class="dummy-element ng-binding" data-toggle="modal">Generate code</a>
+                </li>
+								<li>
+										<a ng-click="cleanup()" class="dummy-element ng-binding" data-toggle="modal">Clean up</a>
+								</li>
+                <li>
+                    <a  href="show.html" class="dummy-element dndDragover ng-binding">
+                        Show generated page
+                    </a>
+                </li>
 
-	<center>
-		<button class="btn btn-warning btn-lg" ng-click="generate()" style="margin: 10px;">Generate Code!</button>
+								<li>
+										<a href="index.html" class="dummy-element ng-binding" data-toggle="modal">Home page</a>
+								</li>
+            </ul>
+	</div>
+		<!-- <button class="btn btn-warning btn-lg" ng-click="generate()" style="margin: 10px;">Generate Code!</button>
 		<button class="btn btn-danger btn-lg" ng-click="cleanup()" style="margin: 10px;">Clean Up!</button>
-	</center>
-	<center>
 		<a href="show.html" class="btn btn-success" style="margin: 10px;">Show Generated Page</a>
-		<a href="index.html" class="btn btn-success" style="margin: 10px;">Home Page</a>
-	</center>
+		<a href="index.html" class="btn btn-success" style="margin: 10px;">Home Page</a> -->
+</nav>
 
 	<div class="modal fade" id="show-code" role="dialog">
 		<div class="modal-dialog big-modal">

@@ -116,7 +116,6 @@ dummyEditor.__performInit = function(lang, cb) {
   dummyEditor._module = angular.module("dummyEditor", dependencies);
 
 
-<<<<<<< Updated upstream
     dummyEditor._module.config(['$translateProvider', function($translateProvider) {
         var files = {
             files: []
@@ -624,5 +623,4 @@ for (var i = 0; i<dummyEditor._callbacks.length; i++) {
 }
 console.log("DummyEditor Loaded");
 if (cb) cb();
-
 };
