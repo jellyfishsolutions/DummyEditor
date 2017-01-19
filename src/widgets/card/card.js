@@ -18,17 +18,8 @@ dummyEditor.addWidget({
             "5": "box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);"
         }
         item.style = elevationOptions[item.elevation];
-        item.style += " ";
+        item.style += " "+item.genericStyleString+" ";
         item.style += 'border-radius:'+item.borderRadius+'; ';
-        if (item.margintop) item.style += 'margin-top: '+item.margintop+'; ';
-        if (item.marginleft) item.style += 'margin-left: '+item.marginleft+'; ';
-        if (item.marginright) item.style += 'margin-right: '+item.marginright+'; ';
-        if (item.marginbottom) item.style += 'margin-bottom: '+item.marginbottom+'; ';
-        if (item.paddingtop) item.style += 'padding-top: '+item.paddingtop+'; ';
-        if (item.paddingleft) item.style += 'padding-left: '+item.paddingleft+'; ';
-        if (item.paddingright) item.style += 'padding-right: '+item.paddingright+'; ';
-        if (item.paddingbottom) item.style += 'padding-bottom: '+item.paddingbottom+'; ';
-        if (item.background) item.style += 'background:'+item.background+';';
     },
     generateCode: function(item) {
         var out = {
@@ -46,33 +37,7 @@ dummyEditor.addWidget({
         }
         out.css += elevationOptions[item.elevation]+"\n";
         out.css += 'border-radius:'+item.borderRadius+';\n';
-        if (item.background) {
-            out.css += "background: "+item.background+";\n";
-        }
-        if (item.paddingtop) {
-            out.css += "padding-top: "+item.paddingtop+";\n";
-        }
-        if (item.paddingleft) {
-            out.css += "padding-left: "+item.paddingleft+";\n";
-        }
-        if (item.paddingright) {
-            out.css += "padding-right: "+item.paddingright+";\n";
-        }
-        if (item.paddingbottom) {
-            out.css += "padding-bottom: "+item.paddingbottom+";\n";
-        }
-        if (item.margintop) {
-            out.css += "margin-top: "+item.margintop+";\n";
-        }
-        if (item.marginleft) {
-            out.css += "margin-left: "+item.marginleft+";\n";
-        }
-        if (item.marginright) {
-            out.css += "margin-right: "+item.marginright+";\n";
-        }
-        if (item.marginbottom) {
-            out.css += "margin-bottom: "+item.marginbottom+";\n";
-        }
+        out.css += item.genericStyleString+";\n";
         out.css += "}\n";
         out.html += '<div';
         if (item.custom_id) out.html += ' id=dummy-card-"'+item.id+'"';

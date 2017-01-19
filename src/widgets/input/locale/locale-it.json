@@ -9,6 +9,7 @@
         "text": "Testo",
         "password": "Password",
         "file": "File",
-        "number": "Numero"
+        "number": "Numero",
+        "labelcolor": "Colore del testo dell'etichetta"
     }
 }

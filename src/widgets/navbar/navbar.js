@@ -44,13 +44,13 @@ dummyEditor.addWidget({
     },
     generateCode: function(item) {
 
-        var html = '<nav class="navbar '+item.navbarStyle+' '+item.customClassesPrintable+'">\n';
+        var html = '<nav class="navbar '+item.navbarStyle+' '+item.customClassesPrintable+'" style="'+item.genericStyleString+'">\n';
         html += '<div class="container-fluid">\n';
         html += '<div class="navbar-header">\n';
         html += '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-'+item.id+'" aria-expanded="false">\n';
         html += '<span class="sr-only">Toggle navigation</span>\n<span class="icon-bar"></span>\n<span class="icon-bar"></span>\n<span class="icon-bar"></span>\n';
         html += '</button>\n';
-        html += '<a class="navbar-brand" href="'+item.brand.url+'">\n';
+        html += '<a class="navbar-brand" href="'+item.brand.url+'" style="color: '+item.brandtextcolor+';">\n';
         html += '<span>\n';
         if (item.brand.img) {
             html += '<img alt="'+item.brand.imgText+'" src="'+item.brand.img+'" style="margin-top:-5px; height: 30px;">\n';
@@ -74,9 +74,9 @@ dummyEditor.addWidget({
             }
             html += '">\n';
             if (element.type!='dropdown') {
-                html += '<a href="'+element.url+'">'+element.title+'</a>\n';
+                html += '<a href="'+element.url+'" style="color: '+item.generics.data["color"]+'">'+element.title+'</a>\n';
             } else {
-                html += '<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="'+element.url+'">'+element.title+'<span class="caret"></span></a>\n';
+                html += '<a style="color: '+item.generics.data["color"]+'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="'+element.url+'">'+element.title+'<span class="caret"></span></a>\n';
                 html += '<ul class="dropdown-menu">\n';
                 for (var k = 0; k<element.data.length; k++) {
                     html += '<li><a href="'+element.data[k].url+'">'+element.data[k].title+'</a></li>\n';

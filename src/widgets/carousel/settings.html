@@ -52,6 +52,10 @@
         <input type="text" class="dummy-editor-form-control" id="height" placeholder="{{'carousel.height' | translate }}" ng-model="item.height">
     </div>
     <div class="dummy-editor-form-group">
+        <label for="width">{{'carousel.width' | translate}}:</label>
+        <input type="text" class="dummy-editor-form-control" id="height" placeholder="{{'carousel.width' | translate }}" ng-model="item.width">
+    </div>
+    <div class="dummy-editor-form-group">
         <label for="interval">{{'carousel.interval' | translate}}:</label>
         <input type="text" class="dummy-editor-form-control" id="interval" placeholder="{{'carousel.interval' | translate }}" ng-model="item.interval">
     </div>
@@ -61,4 +65,5 @@
             {{'carousel.showcontrollers' | translate}}
         </label>
     </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
 </form>

@@ -39,10 +39,14 @@
                 <input id="brand-text" type="text" class="dummy-editor-form-control" placeholder="{{'navbar.brand-text' | translate}}" ng-model="item.brand.text">
             </div>
             <div class="dummy-editor-form-group">
+                <label for="brandtextcolor">{{'navbar.brandtextcolor' | translate}}:</label>
+                <colorpicker placeholder="{{'navbar.brandtextcolor' | translate }}" ng-model="item.brandtextcolor" id="brandtextcolor"></colorpicker>
+            </div>
+            <div class="dummy-editor-form-group">
                 <label for="brand-url">{{'navbar.brand-url-long' | translate}}:</label>
                 <input id="brand-url" type="text" class="dummy-editor-form-control" placeholder="{{'navbar.brand-url' | translate}}" ng-model="item.brand.url">
             </div>
-
+            <generic-settings ng-model="item.generics"></generic-settings>
 
         </div>
         <div role="tabpanel" class="tab-pane" ng-class="selected=='menu'?'active':''" id="menu" style="margin-top:10px;">

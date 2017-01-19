@@ -205,13 +205,56 @@
         });
 
 
-        dummyEditor._module.directive("colorpicker", function($timeout) {
+        dummyEditor._module.directive("genericSettings", function($timeout) {
             return {
                 restrict: 'AE',
                 scope: {
                     id: "@",
                     colorvalue: "=",
                     placeholder: "@"
+                },
+                require: 'ngModel',
+                templateUrl: dummyEditor._path + '/templates/genericSettings.html',
+                link: function(scope, iElement, iAttrs, ngModelCtrl) {
+
+                    ngModelCtrl.$formatters.push(function(modelValue) {
+                      console.log("formatters", modelValue);
+                        return modelValue;
+                    });
+                    scope.$watch('data', function() {
+                        ngModelCtrl.$setViewValue(
+                          {
+                            data: scope.data
+                          });
+                    }, true);
+
+                    ngModelCtrl.$parsers.push(function(viewValue) {
+                      console.log("parsers", viewValue);
+                        return viewValue;
+                    });
+                    ngModelCtrl.$render = function() {
+                        if(ngModelCtrl.$viewValue == undefined) {
+                          ngModelCtrl.$viewValue = {
+                            data: {
+                            }
+                          }
+                        }
+                        if(!scope.data) {
+                          scope.data = ngModelCtrl.$viewValue.data;
+                        }
+                    };
+                }
+            };
+        });
+
+
+        dummyEditor._module.directive("colorpicker", function($timeout) {
+            return {
+                restrict: 'AE',
+                scope: {
+                  id: "@",
+                  colorvalue: "=",
+                  placeholder: "@"
                 },
                 require: 'ngModel',
                 templateUrl: dummyEditor._path + '/templates/colorpicker.html',
@@ -233,6 +276,7 @@
 
                     $timeout(function() {
                         $(document).ready(function() {
+                          console.log("readyyy colors");
                             $('input#' + scope.id).minicolors({
                                 control: 'rgb',
                                 defaultValue: '',
@@ -253,6 +297,8 @@
                 }
             };
         });
+
+
 
 
 
@@ -506,6 +552,12 @@
             $scope.saveSettings = function() {
                 delete $scope.selectedItem.backup;
                 $scope.item.customClassesPrintable = "";
+                if($scope.item.generics) {
+                  $scope.item.genericStyleString = "";
+                  for(var key in $scope.item.generics.data) {
+                      $scope.item.genericStyleString+=key +": "+ $scope.item.generics.data[key]+";"
+                  }
+                }
                 for (var i = 0; i < $scope.item.customClasses.length; i++) {
                     $scope.item.customClassesPrintable += $scope.item.customClasses[i].substring(1) + " ";
                 }

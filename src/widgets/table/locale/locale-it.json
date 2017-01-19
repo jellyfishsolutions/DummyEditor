@@ -12,6 +12,7 @@
         "actions": "Azioni",
         "addrow": "Aggiungi Riga",
         "addcolumn": "Aggiungi Colonna",
-        "columnname": "Nome colonna"
+        "columnname": "Nome colonna",
+        "noborder": "Nessun bordo"
     }
 }

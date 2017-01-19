@@ -16,5 +16,15 @@
     "css_close": "Close",
     "css_save_changes": "Save Changes",
     "custom_classes": "Custom Classes",
-    "add_css_class": "Add Class"
+    "add_css_class": "Add Class",
+    "width": "Width",
+    "height": "Height",
+    "margin": "Margin",
+    "center":"Center",
+    "left": "Left",
+    "right": "Right",
+    "textalign": "Text alignment",
+    "bgcolor": "Background color",
+    "color": "Color",
+    "textcolor": "Text Color"
 }

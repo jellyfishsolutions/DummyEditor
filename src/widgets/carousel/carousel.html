@@ -1,5 +1,5 @@
 <div>
-     <div id="carousel-{{item.id}}" class="carousel slide {{item.customClassesPrintable}}" data-ride="carousel" data-interval="{{item.interval}}">
+     <div id="carousel-{{item.id}}" class="carousel slide {{item.customClassesPrintable}}" data-ride="carousel" style="{{item.genericStyleString}}" data-interval="{{item.interval}}">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li ng-repeat="img in item.data track by $index" data-target="#carousel-{{item.id}}" data-slide-to="{{$index}}" ng-class="$index==0 ? 'active' : ''"></li>
@@ -8,8 +8,8 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div ng-repeat="img in item.data track by $index" ng-class="$index==0 ? 'item active' : 'item'">
-                <img ng-src="{{img.url}}" alt="{{img.alt}}" style="height:{{item.height}}; margin: 0 auto;">
-                <div class="carousel-caption">
+                <img ng-src="{{img.url}}" alt="{{img.alt}}" style="height:{{item.height}}; width:{{item.width}}; margin: 0 auto;">
+                <div class="carousel-caption" style="text-align:{{item.generics.data['text-align']}};color:{{item.generics.data['color']}}">
                     <h2 ng-if="img.text_h2">{{img.text_h2}}</h2>
                     <p ng-if="img.text_small">{{img.text_small}}</p>
                 </div>

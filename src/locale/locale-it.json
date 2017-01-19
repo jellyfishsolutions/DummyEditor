@@ -16,5 +16,15 @@
     "css_close": "Chiudi",
     "css_save_changes": "Salva Modifiche",
     "custom_classes": "Classi Personalizzate",
-    "add_css_class": "Aggiungi Classe"
+    "add_css_class": "Aggiungi Classe",
+    "width": "Larghezza",
+    "height": "Altezza",
+    "margin": "Margine",
+    "center": "Centro",
+    "left": "Sinistra",
+    "right": "Destra",
+    "textalign": "Allineamento del testo",
+    "bgcolor": "Colore di sfondo",
+    "color": "Colore",
+    "textcolor": "Colore del testo"
 }

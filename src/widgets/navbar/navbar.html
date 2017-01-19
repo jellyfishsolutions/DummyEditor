@@ -1,4 +1,4 @@
-<nav class="navbar {{item.navbarStyle}} {{item.customClassesPrintable}}">
+<nav class="navbar {{item.navbarStyle}} {{item.customClassesPrintable}}" style="{{item.genericStyleString}}">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-{{item.id}}" aria-expanded="false">
@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="{{item.brand.url}}">
+            <a class="navbar-brand" href="{{item.brand.url}}" style="color:{{item.brandtextcolor}}">
                 <span><img ng-if="item.brand.img" alt="{{item.brand.imgText}}" ng-src="{{item.brand.img}}" style="margin-top:-5px; height: 30px;"></span>
                 {{item.brand.text}}
             </a>
@@ -25,8 +25,8 @@
 
             <ul class="nav navbar-nav" ng-class="item.menuRight?'navbar-right':'navbar-left'">
                 <li ng-repeat="element in item.menu track by $index" ng-class="{'active': element.active, 'dropdown': element.type=='dropdown'}">
-                    <a ng-if="element.type!='dropdown'" href="{{element.url}}">{{element.title}}</a>
-                    <a ng-if="element.type=='dropdown'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{element.url}}">{{element.title}} <span class="caret"></span></a>
+                    <a ng-if="element.type!='dropdown'" href="{{element.url}}" style="color: {{item.generics.data['color']}}">{{element.title}}</a>
+                    <a ng-if="element.type=='dropdown'" style="color: {{item.generics.data['color']}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{element.url}}">{{element.title}} <span class="caret"></span></a>
                     <ul ng-if="element.type=='dropdown'" class="dropdown-menu">
                         <li ng-repeat="d in element.data track by $index">
                             <a href="{{d.url}}">{{d.title}}</a>

@@ -9,7 +9,7 @@ dummyEditor.addWidget({
     dependencies: [],
     generateCode: function(item) {
         return {
-            html: '<input type="submit" class="btn '+item.bclass+' '+item.bsize+' '+item.customClassesPrintable+'" value="'+item.text+'"></input>',
+            html: '<input type="submit" style="'+item.genericStyleString+'" class="btn '+item.bclass+' '+item.bsize+' '+item.customClassesPrintable+'" value="'+item.text+'"></input>',
             css: ''
         };
     }

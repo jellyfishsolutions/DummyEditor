@@ -24,4 +24,9 @@
             <option value='number'>{{'input.number' | translate}}</option>
         </select>
     </div>
+    <div class="dummy-editor-form-group">
+        <label for="labelcolor">{{'labelcolor' | translate}}:</label>
+        <colorpicker placeholder="{{'input.labelcolor' | translate }}" ng-model="item.labelcolor" id="labelcolor"></colorpicker>
+    </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
 </form>

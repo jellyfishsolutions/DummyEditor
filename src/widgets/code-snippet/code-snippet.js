@@ -8,7 +8,7 @@ dummyEditor.addWidget({
         var t = item.code.replace(/</g, '&lt;');
         t = t.replace(/>/g, '&gt;');
         return {
-            html: '<pre class="'+item.customClassesPrintable+'">\n'+t+'\n</pre>\n',
+            html: '<pre class="'+item.customClassesPrintable+'" style="'+item.genericStyleString+'">\n'+t+'\n</pre>\n',
             css: ''
         };
     }

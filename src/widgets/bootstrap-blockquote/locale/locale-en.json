@@ -2,6 +2,7 @@
     "bootstrapblockquote": {
         "name": "Blockquote",
         "text": "Text",
-        "footer": "Footer"
+        "footer": "Footer",
+        "footercolor": "Footer text color"
     }
 }

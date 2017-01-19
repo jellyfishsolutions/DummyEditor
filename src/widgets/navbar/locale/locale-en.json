@@ -33,6 +33,7 @@
         "inverse-fixed-top": "Fixed Top, Inverted Colors",
         "inverse-fixed-bottom": "Fixed Bottom, Inverted Colors",
         "inverse-static-top": "Static Top, Inverted Colors",
-        "menustyle": "Align menu to the right"
+        "menustyle": "Align menu to the right",
+        "brandtextcolor": "Brand text color"
     }
 }

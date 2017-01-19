@@ -6,12 +6,13 @@
           <div class="input-group-addon"><span class="glyphicon {{item.icon}}" style="font-size: 20px;" aria-hidden="true"></span></div>
         </div>
     </div>
-    <div class="dummy-editor-form-group">
+    <!-- <div class="dummy-editor-form-group">
         <label for="iconcolor">{{'boostrapglyphicons.color' | translate}}:</label>
         <colorpicker id="iconcolor" placeholder="{{'boostrapglyphicons.color' | translate }}" ng-model="item.color"></colorpicker>
-    </div>
+    </div> -->
     <div class="dummy-editor-form-group">
         <label for="size">{{'boostrapglyphicons.size' | translate}}:</label>
         <input type="text" class="dummy-editor-form-control" id="size" placeholder="{{'boostrapglyphicons.size' | translate }}" ng-model="item.size">
     </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
 </form>

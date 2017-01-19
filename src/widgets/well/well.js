@@ -10,7 +10,7 @@ dummyEditor.addWidget({
             html: '',
             css: ''
         };
-        out.html = '<div class="well ';
+        out.html = '<div style="'+item.genericStyleString+'" class="well ';
         if (item.style) {
             out.html += item.style;
         }

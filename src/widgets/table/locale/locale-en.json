@@ -12,6 +12,7 @@
         "actions": "Actions",
         "addrow": "Add Row",
         "addcolumn": "Add Column",
-        "columnname": "Column name"
+        "columnname": "Column name",
+        "noborder": "No border"
     }
 }

@@ -1,12 +1,17 @@
-<table class="table {{item.styleClasses}} {{item.customClassesPrintable}}">
+<table class="table {{item.styleClasses}} {{item.customClassesPrintable}}" style="{{item.genericStyleString}}">
     <thead ng-if="item.showHeader">
         <tr>
-            <th ng-repeat="header in item.header track by $index">{{header}}</th>
+            <th style="text-align: {{item.generics.data['text-align']}}; color: {{item.generics.data['color']}}" ng-repeat="header in item.header track by $index">{{header}}</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="line in item.data track by $index">
-            <td ng-repeat="cell in line track by $index">{{cell}}</td>
+            <td ng-repeat="cell in line track by $index" style="text-align: {{item.generics.data['text-align']}}; color: {{item.generics.data['color']}}">{{cell}}</td>
         </tr>
     </tbody>
+    <style>
+    .table-no-border td{
+      border-top: none !important;
+    }
+    </style>
 </table>

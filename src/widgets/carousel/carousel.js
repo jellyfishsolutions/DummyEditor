@@ -35,7 +35,7 @@ dummyEditor.addWidget({
     generateCode: function(item) {
         var css = '';
         var html = '';
-        html += '<div id="carousel-'+item.id+'" class="carousel slide '+item.customClassesPrintable+'" data-ride="carousel" data-interval="'+item.interval+'">\n';
+        html += '<div id="carousel-'+item.id+'" class="carousel slide '+item.customClassesPrintable+'" style="'+item.genericStyleString+'"  data-ride="carousel" data-interval="'+item.interval+'">\n';
         html += '<ol class="carousel-indicators">\n';
         for (var i = 0; i<item.data.length; i++) {
             html += '<li data-target="#carousel-'+item.id+'" data-slide-to="'+i+'" class="'+(i==0 ? 'active':'')+'"></li>\n';
@@ -45,8 +45,8 @@ dummyEditor.addWidget({
         for (var i = 0; i<item.data.length; i++) {
             var img = item.data[i];
             html += '<div class="item '+(i==0 ? 'active':'')+'">\n';
-            html += '<img src="'+img.url+'" alt="'+img.alt+'" style="height:'+item.height+'; margin: 0 auto;">\n';
-            html += '<div class="carousel-caption">\n';
+            html += '<img src="'+img.url+'" alt="'+img.alt+'" style="height:'+item.height+'; width='+item.width+'; margin: 0 auto;">\n';
+            html += '<div class="carousel-caption" style="text-align:'+item.generics.data["text-align"]+';color: '+item.generics.data['color']+'">\n';
             if (img.text_h2) {
                 html += '<h2>'+img.text_h2+'</h2>\n';
             }

@@ -6,7 +6,7 @@ dummyEditor.addWidget({
     name: "code.name",
     generateCode: function(item) {
         return {
-            html: '<div class="'+item.customClassesPrintable+'">\n'+item.code+'\n</div>\n',
+            html: '<div class="'+item.customClassesPrintable+'" style="'+item.genericStyleString+'">\n'+item.code+'\n</div>\n',
             css: ''
         };
     }

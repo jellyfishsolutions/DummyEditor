@@ -10,6 +10,7 @@
         "removeimg": "Rimuovi Immagine",
         "addimg": "Aggiungi Immagine",
         "height": "Altezza immagini",
+        "width": "Larghezza immagini",
         "interval": "Intervallo tra le immagini (ms)",
         "showcontrollers": "Visualizza Controlli"
     }

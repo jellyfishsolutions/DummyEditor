@@ -2,6 +2,7 @@
     "bootstrapblockquote": {
         "name": "Citazione",
         "text": "Testo",
-        "footer": "Footer"
+        "footer": "Footer",
+        "footercolor": "Colore del testo del footer"
     }
 }

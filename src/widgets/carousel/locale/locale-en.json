@@ -10,6 +10,7 @@
         "removeimg": "Remove Image",
         "addimg": "Add Image",
         "height": "Images height",
+        "width": "Images height",
         "interval": "Interval between images (ms)",
         "showcontrollers": "Show controllers"
     }

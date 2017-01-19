@@ -1,4 +1,4 @@
-<div class="container-element row">
+<div class="container-element row" style="{{item.genericStyleString}}">
     <form class="{{item.customClassesPrintable}}" ng-class="item.inline ? 'form-inline' : ''">
         <div class="col-xs-12" ng-repeat="list in item.columns" ng-include="'list.html'"></div>
     </form>

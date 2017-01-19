@@ -11,16 +11,5 @@
           <input id="alt" type="text" class="dummy-editor-form-control" placeholder="Description" ng-model="item.alt">
         </div>
     </div>
-    <div class="dummy-editor-form-group">
-        <label>{{'image.dimensions' | translate}}:</label>
-        <div class="input-group">
-            <div class="input-group-addon">{{'image.width' | translate}}:</div>
-            <input type="text" class="dummy-editor-form-control" placeholder="Width" ng-model="item.width">
-        </div>
-        <br/>
-        <div class="input-group">
-            <div class="input-group-addon">{{'image.height' | translate}}:</div>
-            <input type="text" class="dummy-editor-form-control" placeholder="Height" ng-model="item.height">
-        </div>
-    </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
 </form>

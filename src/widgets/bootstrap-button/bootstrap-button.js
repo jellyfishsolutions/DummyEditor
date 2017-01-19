@@ -11,7 +11,7 @@ dummyEditor.addWidget({
     generateCode: function(item) {
         //var css = ".gly-"+item.id+" {\ncolor: #"+item.color+";\nfont-size: "+item.size+";\n}\n";
         return {
-            html: '<a class="btn '+item.bclass+' '+item.bsize+' '+item.customClassesPrintable+'" href="'+item.url+'">'+item.text+'</a>',
+            html: '<a style="'+item.genericStyleString+'" class="btn '+item.bclass+' '+item.bsize+' '+item.customClassesPrintable+'" href="'+item.url+'">'+item.text+'</a>',
             css: ''
         };
     }

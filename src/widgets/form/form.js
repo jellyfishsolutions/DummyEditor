@@ -14,7 +14,7 @@ dummyEditor.addWidget({
             html: '',
             css: ''
         };
-        out.html += '<form action="'+item.action+'" method="'+item.method+'" class="';
+        out.html += '<form style="'+item.genericStyleString+'" action="'+item.action+'" method="'+item.method+'" class="';
         if (item.inline) {
             out.html += 'form-inline';
         }

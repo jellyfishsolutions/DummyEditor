@@ -28,14 +28,17 @@ dummyEditor.addWidget({
         if (item.isCondensed) {
             item.styleClasses +=  " table-condensed";
         }
+        if(item.isWithoutBorder) {
+          item.styleClasses += "table-no-border";
+        }
     },
     generateCode: function(item) {
 
-        var html = '<table class="table '+item.styleClasses+' '+item.customClassesPrintable+'">\n';
+        var html = '<table style="'+item.genericStyleString+'" class="table '+item.styleClasses+' '+item.customClassesPrintable+'">\n';
         if (item.showHeader) {
             html += '\t<thead>\n\t\t<tr>\n';
             for (var i = 0; i<item.header.length; i++) {
-                html += '\t\t\t<th>'+item.header[i]+'</th>\n';
+                html += '\t\t\t<th style="text-align: '+item.generics.data["text-align"]+'; color: '+item.generics.data["color"]+';">'+item.header[i]+'</th>\n';
             }
             html += '\t\t</tr>\n\t</thead>\n';
         }
@@ -43,7 +46,7 @@ dummyEditor.addWidget({
         for (var i = 0; i<item.data.length; i++) {
             html += '\t\t<tr>\n';
             for (var k = 0; k<item.data[i].length; k++) {
-                html += '\t\t\t<td>'+item.data[i][k]+'</td>\n';
+                html += '\t\t\t<td style="text-align: '+item.generics.data["text-align"]+'; color: '+item.generics.data["color"]+';">'+item.data[i][k]+'</td>\n';
             }
             html += '\t\t</tr>\n';
         }
@@ -52,7 +55,7 @@ dummyEditor.addWidget({
 
         return {
             html: html,
-            css: ''
+            css: '  .table-no-border td {border-top: none !important;}'
         };
     }
 });

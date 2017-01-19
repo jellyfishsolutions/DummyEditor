@@ -11,62 +11,23 @@
                 <label for="border-radius">{{'card.border-radius' | translate}}:</label>
                 <input type="text" class="dummy-editor-form-control" id="border-radius" placeholder="{{'card.border-radius' | translate }}" ng-model="item.borderRadius">
             </div>
-            <div class="dummy-editor-form-group">
-                <label for="bgcolor">{{'card.bgcolor' | translate}}:</label>
-                <colorpicker placeholder="{{'card.color' | translate }}" ng-model="item.background" id="bgcolor"></colorpicker>
-            </div>
-            <div class="dummy-editor-form-group">
-                <label>{{'card.padding' | translate}}:</label>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-down-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.paddingtop">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-right-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.paddingleft">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-left-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.paddingright">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-up-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.paddingbottom">
-                </div>
-            </div>
-            <div class="dummy-editor-form-group">
-                <label>{{'card.margin' | translate}}:</label>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-down-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.margintop">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-right-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.marginleft">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-left-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.marginright">
-                </div>
-                <div class="input-group">
-                  <div class="input-group-addon"><i class="icon-up-big"></i></div>
-                  <input type="text" class="dummy-editor-form-control" placeholder="{{'card.size' | translate }}" ng-model="item.marginbottom">
-                </div>
-            </div>
         </div>
         <div class="col-md-4">
             <div class="card-example-wrapper">
                 <div class="card-example" style="{{options[item.elevation]}} border-radius:{{item.borderRadius}};
-                margin-top: {{item.margintop}}; margin-left: {{item.marginleft}};
-                margin-right: {{item.marginright}}; margin-bottom: {{item.marginbottom}};
-                padding-top: {{item.paddingtop}}; padding-left: {{item.paddingleft}};
-                padding-right: {{item.paddingright}}; padding-bottom: {{item.paddingbottom}};
-                background: {{item.background}};">
+                margin-top: {{item.generics.data['margin-top']}}; margin-left: {{item.generics.data['margin-left']}};
+                margin-right: {{item.generics.data['margin-right']}}; margin-bottom: {{item.generics.data['margin-bottom']}};
+                padding-top: {{item.generics.data['padding-top']}}; padding-left: {{item.generics.data['padding-left']}};
+                padding-right: {{item.generics.data['padding-right']}}; padding-bottom: {{item.generics.data['padding-bottom']}};
+                background-color: {{item.generics.data['background-color']}};color: {{item.generics.data['color']}}; text-align: {{item.generics.data['text-align']}};">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
                 </div>
             </div>
         </div>
     </div>
+    <div style="width:100%;height:30px">
+    </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
 </form>
 <style>
     .card-example {

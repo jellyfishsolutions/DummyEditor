@@ -5,6 +5,7 @@
         <input type="checkbox" ng-model="item.isBordered"> {{'table.bordered' | translate}}<br>
         <input type="checkbox" ng-model="item.isHover"> {{'table.hovered' | translate}}<br>
         <input type="checkbox" ng-model="item.isCondensed"> {{'table.condensed' | translate}}<br>
+        <input type="checkbox" ng-model="item.isWithoutBorder"> {{'table.noborder' | translate}}<br>
     </div>
 
     <div class="dummy-editor-form-group">
@@ -63,6 +64,8 @@
 
 
     </div>
+    <generic-settings ng-model="item.generics"></generic-settings>
+
 </form>
 <style>
     .dummy-table-line {

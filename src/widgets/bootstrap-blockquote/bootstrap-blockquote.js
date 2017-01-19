@@ -8,7 +8,7 @@ dummyEditor.addWidget({
     dependencies: [],
     generateCode: function(item) {
         return {
-            html: '<blockquote class="'+item.customClassesPrintable+'"><p>'+item.text+'</p><footer>'+item.footer+'</footer></blockquote>',
+            html: '<blockquote style="'+item.genericStyleString+'" class="'+item.customClassesPrintable+'"><p>'+item.text+'</p><footer style="color: '+item.footercolor+';">'+item.footer+'</footer></blockquote>',
             css: ''
         };
     }

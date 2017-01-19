@@ -1,4 +1,8 @@
-<div class="form-group {{item.customClassesPrintable}}">
-    <label ng-if="item.label" for="{{item.inputId}}">{{item.label}}</label>
-    <input type="{{item.inputType}}" name="{{item.name}}" class="form-control" id="{{item.inputId}}" placeholder="{{item.placeholder}}">
+<div class="form-group {{item.customClassesPrintable}}"
+style="text-align:{{item.generics.data['text-align']}};width:{{item.generics.data['width']}};
+margin-top:{{item.generics.data['margin-top']}};margin-left:{{item.generics.data['margin-left']}};margin-right:{{item.generics.data['margin-right']}};margin-bottom:{{item.generics.data['margin-bottom']}};
+padding-top:{{item.generics.data['padding-top']}};padding-left:{{item.generics.data['padding-left']}};padding-right:{{item.generics.data['padding-right']}};padding-bottom:{{item.generics.data['padding-bottom']}};
+">
+    <label ng-if="item.label" style="color:{{item.labelcolor}}" for="{{item.inputId}}">{{item.label}}</label>
+    <input style="color:{{item.generics.data['color']}};background-color:{{item.generics.data['background-color']}};text-align:{{item.generics.data['text-align']}};height:{{item.generics.data['height']}};" type="{{item.inputType}}" name="{{item.name}}" class="form-control" id="{{item.inputId}}" placeholder="{{item.placeholder}}">
 </div>

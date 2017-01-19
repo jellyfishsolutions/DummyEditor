@@ -1,0 +1,65 @@
+<div class="dummy-editor-form-group">
+        <label for="width" class="ng-binding">{{'width' | translate}}</label>
+        <input type="text" class="dummy-editor-form-control ng-pristine ng-valid ng-not-empty ng-touched" id="width" placeholder="{{'width' | translate}}" ng-model="data.width"/>
+</div>
+<div class="dummy-editor-form-group">
+        <label for="height" class="ng-binding">{{'height' | translate}}</label>
+        <input type="text" class="dummy-editor-form-control ng-pristine ng-valid ng-not-empty ng-touched" id="height" placeholder="{{'height' | translate}}" ng-model="data.height" />
+</div>
+
+<div class="dummy-editor-form-group">
+    <label>{{'container.padding' | translate}}:</label>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-down-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['padding-top']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-right-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['padding-left']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-left-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['padding-right']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-up-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['padding-bottom']">
+    </div>
+</div>
+
+<div class="dummy-editor-form-group">
+    <label>{{'margin' | translate}}:</label>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-down-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['margin-top']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-right-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['margin-left']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-left-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['margin-right']">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="icon-up-big"></i></div>
+      <input type="text" class="dummy-editor-form-control" placeholder="{{'container.size' | translate }}" ng-model="data['margin-bottom']">
+    </div>
+</div>
+<div class="dummy-editor-form-group">
+    <label for="textalign">{{'textalign' | translate}}:</label>
+    <select id="textalign" class="dummy-editor-form-control" ng-model="data['text-align']">
+        <option value='left'>{{'left' | translate}}</option>
+        <option value='center'>{{'center' | translate}}</option>
+        <option value='right'>{{'right' | translate}}</option>
+    </select>
+</div>
+
+<div class="dummy-editor-form-group">
+    <label for="bgcolor">{{'bgcolor' | translate}}:</label>
+    <colorpicker placeholder="{{'color' | translate }}" ng-model="data['background-color']" id="bgcolor"></colorpicker>
+</div>
+<div class="dummy-editor-form-group">
+    <label for="textcolor">{{'textcolor' | translate}}:</label>
+    <colorpicker placeholder="{{'color' | translate }}" ng-model="data['color']" id="textcolor"></colorpicker>
+</div>
