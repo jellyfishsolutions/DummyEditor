@@ -7,11 +7,16 @@
      it from the original list yourself using the dnd-moved attribute -->
     <script type="text/ng-template" id="list.html">
         <ul dnd-list="list" ng-init="myList=item" dnd-inserted="addedElement(item, myList)">
-            <li ng-repeat="item in list" class="dropli" dnd-draggable="item" dnd-effect-allowed="move" dnd-moved="performMove(list, $index)" ng-class="{selected: models.selected === item}" ng-mouseenter="mouseEnter(item)" ng-mouseleave="mouseExit(item)">
+            <li ng-repeat="item in list track by $index" id="item{{item.id}}{{item.type}}" class="dropli" dnd-draggable="item" dnd-effect-allowed="move" dnd-moved="performMove(list, $index)" ng-class="{selected: models.selected === item}" ng-mouseenter="mouseEnter(item)" ng-mouseleave="mouseExit(item)" >
                 <div class="dummy-container">
                     <div class="dummy-wrapper" ng-include="baseUrl + item.type + '/' + item.type + '.html'"></div>
-                    <element-info></element-info>
+                    <element-info ng-class="item.isContainer ? 'element-info-container' : 'element-info'" ></element-info>
                 </div>
+                <style>
+                #item{{item.id}}{{item.type}}:hover {
+                  border-color:{{item.color}} !important;
+                }
+                </style>
             </li>
         </ul>
     </script>

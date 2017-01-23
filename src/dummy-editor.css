@@ -99,7 +99,7 @@
 }
 
 .dummy-editor .dummy-container {
-    
+
 }
 
 
@@ -133,9 +133,11 @@
 
 .dummy-editor .display-info {
     font-family: 'Lato', sans-serif;
-    position: absolute;
+    /*position: absolute;*/
     bottom: 0px;
     height: 40px;
+    /*width:150px;*/
+    left:0px !important;
     right: 5px;
     background: #F7A3EC;
     padding: 3px 5px 3px 5px;
@@ -151,9 +153,10 @@
 
 .dummy-editor .display-info-container {
     font-family: 'Lato', sans-serif;
-    position: absolute;
+    /*position: absolute;*/
     top: 0px;
     height: 40px;
+    /*width:150px;*/
     left: 5px;
     background: #F7A3EC;
     padding: 3px 5px 3px 5px;
@@ -1107,4 +1110,13 @@ fieldset[disabled] .dummy-btn-link:focus {
 }
 .buttons-bar * {
   color:white;
+}
+element-info {
+  position: absolute !important;
+}
+element-info.element-info-container {
+  top: 0px !important;
+}
+element-info.element-info {
+  bottom: 0px !important;
 }
